@@ -29,13 +29,27 @@
 
 
 
-var url = "http://localhost:8080/api/v1/users";
+// var url = "https://jsonplaceholder.typicode.com/todos";
+// var xhr = new XMLHttpRequest()
+// xhr.open("GET", url, true)
+// xhr.onload = function() {
+//     var users = JSON.parse(xhr.responseText)
+//     if (xhr.readyState == 4 && xhr.status === 200) {
+//         var users = JSON.parse(xhr.responseText)
+//         console.table(users)
+//     } else {
+//         console.err(users);
+//     }
+// }
+// xhr.send(null)
+
+
+var url = "https://jsonplaceholder.typicode.com/todos";
 var xhr = new XMLHttpRequest()
-xhr.open("GET", url, true)
+xhr.open("GET", url + '/1', true)
 xhr.onload = function() {
     var users = JSON.parse(xhr.responseText)
-    if (xhr.readyState == 4 && xhr.status === 200) {
-        var users = JSON.parse(xhr.responseText)
+    if (xhr.readyState == 4 && xhr.status == 200) {
         console.table(users)
     } else {
         console.err(users);
@@ -43,15 +57,56 @@ xhr.onload = function() {
 }
 xhr.send(null)
 
-// var url = "http://localhost:8080/api/v1/users";
+
+// var url = "https://my-json-server.typicode/demo/posts"
+
+// var data = {}
+// data.firstname = "John"
+// data.lastname = "Snow"
+// var json = JSON.stringify(data)
 // var xhr = new XMLHttpRequest()
-// xhr.open("GET", url + '/1', true)
+// xhr.open("POST", url, true)
+// xhr.setRequestHeader('Content-type', 'application/json;charset=urf-8')
+// xhr.onload = function() {
+//     var users = JSON.parse(xhr.responseText)
+//     if (xhr.readyState == 4 && xhr.status == "201") {
+//         console.table(users);
+//     } else {
+//         console.error(userss);
+//     }
+// }
+// xhr.send(json)
+
+
+// var url = "http://localhost:8080/api/v1/users"
+// var data = {}
+// data.firstname = "John2"
+// data.lastname = "Snow2"
+// var json = JSON.stringify(data)
+// var xhr = new XMLHttpRequest()
+// xhr.open("PUT", url + '/12', true)
+// xhr.setRequestHeader('Content-type', 'application/json;charset=urf-8')
 // xhr.onload = function() {
 //     var users = JSON.parse(xhr.responseText)
 //     if (xhr.readyState == 4 && xhr.status == "200") {
-//         console.table(users)
+//         console.table(users);
 //     } else {
-//         console.err(users);
+//         console.error(userss);
+//     }
+// }
+// xhr.send(json)
+
+
+
+// var url = "https://jsonplaceholder.typicode.com/todos/1"
+// var xhr = new XMLHttpRequest()
+// xhr.open("DELETE", url + "/12", true)
+// xhr.onload = function() {
+//     var users = JSON.parse(xhr.responseText)
+//     if (xhr.readyState == 4 && xhr.status == "200") {
+//         console.table(users);
+//     } else {
+//         console.error(users);
 //     }
 // }
 // xhr.send(null)
